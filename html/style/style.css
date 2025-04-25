@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.test-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+}
+
+.test-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.test-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+.test-description {
+    color: #666;
+    font-size: 16px;
+}
+
+.question-block {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    border-left: 4px solid #d32f2f;
+}
+
+.question-text {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #444;
+}
+
+.option {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+.option:hover {
+    color: #d32f2f;
+}
+
+.option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+}
+
+.option:hover input ~ .checkmark {
+    border-color: #d32f2f;
+}
+
+.option input:checked ~ .checkmark {
+    background-color: #fff;
+    border-color: #d32f2f;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.option input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.option .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d32f2f;
+}
+
+/* Стили для чекбоксов */
+.option .checkbox {
+    border-radius: 4px;
+}
+
+.option .checkbox:after {
+    border-radius: 0;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #d32f2f;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    background: transparent;
+}
+
+/* Стили для текстовых полей */
+.text-answer {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: border 0.3s;
+}
+
+.text-answer:focus {
+    outline: none;
+    border-color: #d32f2f;
+}
+
+/* Стили для выпадающих списков */
+.select-answer {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+}
+
+.select-answer:focus {
+    outline: none;
+    border-color: #d32f2f;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    display: block;
+    width: 200px;
+    margin: 30px auto 0;
+    padding: 12px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Номера вопросов */
+.question-number {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 25px;
+}
